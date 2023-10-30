@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: hotpink;
+    position: absolute;
+    z-index: -1;
+    clip-path: circle(38% at right 70%);
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+nav .logo{
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 6px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color:hotpink;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+    width: 80%;
+}
+.content .text{
+    color: white;
+    width: 40%;
+}
+.content .text h2{
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 700px;
+    letter-spacing: 2px;
+}
+.content .text h2 span{
+    color: hotpink;
+    font-size: 34px;
+    text-transform: uppercase;
+    font-weight: 700px;
+    letter-spacing: 2px;
+}
+.content .text p{
+    font-size: 18px;
+    line-height: 25px;
+    margin: 10px 0;
+    letter-spacing: 1px;
+} 
+.content .image {
+    width: 40%;
+}
+.content .image img{
+    width: 380px;
+}
+
+@media (min-width:1100x) and (max-width:2000px){
+    .content .image img{
+        width: 380px;
+    }
+}
+@media (max-width:1100px) and (min-width:795px) {
+    .content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .image , .content .text{
+        width: 80%;
+    }
+    .content .text h2{
+        font-size: 28px;
+        text-transform: uppercase;
+        font-weight: 500px;
+        letter-spacing: 1px;
+    }
+    .content .text p{
+        font-size: 14px;
+        line-height: 20px;
+        margin: 7px 0;
+    }
+}
+@media (max-width:795px) and (min-width:450px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        padding: 10px 0;
+    }
+    nav .logo{
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    nav ul li{
+        display: inline-block;
+        margin: 0 6px;
+    }
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .image , .content .text{
+        width: 80%;
+    }
+    .content .text h2{
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: 700px;
+        letter-spacing: 1px;
+    }
+    .content .text p{
+        font-size: 12px;
+        line-height: 18px;
+        margin: 5px 0;
+    } 
+    .content .image img{
+        width: 250px;
+    }
+
+}
+@media (max-width:450px){
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        padding: 5px 0;
+    }
+    nav .logo{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+    nav ul li{
+        display: inline-block;
+        margin: 0 6px;
+    }
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .content{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .image , .content .text{
+        width: 80%;
+    }
+    .content .text h2{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700px;
+        letter-spacing: 1px;
+    }
+    .content .text p{
+        font-size: 12px;
+        line-height: 18px;
+        margin: 5px 0;
+    } 
+    .content .image img{
+        width: 220px;
+    }
+
+}
